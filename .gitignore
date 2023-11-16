@@ -1,0 +1,30 @@
+# Node.js
+node_modules/
+
+# npm
+*.log
+npm-debug.log*
+
+# Yerel .env dosyaları
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Veritabanı dosyaları
+*.sqlite
+*.db
+
+# Yerel dosyalar
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# IDE veya metin editörü özel dosyalar
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
