@@ -1,0 +1,77 @@
+$accent-color: #FF4F05;
+$sub-border-color: #d8d9da;
+
+
+
+@import './node_modules/bootstrap/scss/bootstrap.scss';
+
+.logo-container {
+  width: 90px;
+  height: 18px;
+  overflow: hidden;
+  background-image: url("./assets/images/logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.input-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid $sub-border-color;
+  padding: 5px 16px;
+  border-radius: 10px;
+}
+.input-box input {
+  width: 550px;
+  height: 40px;
+  place-content: center;
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+}
+.input-box input::placeholder {
+  color: #adb5bd;
+}
+
+.btns{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    height: fit-content;
+}
+.btns div{
+    display: flex;
+    align-items: center;
+}
+.btns div i{
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0;
+}
+.btns div .i-heart{
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0;
+}
+.btn-group div span{
+    font-size: 0.5rem;
+}
+
+nav{
+    border-top: 1px solid $sub-border-color;
+}
+.nav-link:hover{
+    color: $accent-color !important;
+}
+.nav-link.active{
+    color: $accent-color !important;
+    border-bottom: 2px solid $accent-color;
+}
+
+main{
+  margin-top: 133px;
+}
