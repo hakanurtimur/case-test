@@ -12409,23 +12409,8 @@ nav {
 }
 
 .products {
-  height: calc(100vh - 153px);
-}
-
-.products-container {
-  position: relative;
-}
-
-.products-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 38%;
-  background-color: #f8f8f8;
-  background-position: 0 0;
-  z-index: 1;
+  height: 700px;
+  background: linear-gradient(180deg, #f8f8f8 40%, white 0%);
 }
 
 .products-container > h2, .products-container > .h2, .products-container > p {
@@ -12436,20 +12421,20 @@ nav {
   width: 90%;
   height: 90%;
   background-color: #f5f5f5;
-  border-radius: 10%;
+  border-radius: 10px;
 }
 
-.small-img-container img {
-  width: 70%;
-  height: 70%;
+.small-img {
+  width: 60%;
+  height: 60%;
   object-fit: cover;
 }
 
 .lg-inner-div {
   width: 90%;
-  height: 96%;
+  height: 95%;
   background-color: #f5f5f5;
-  border-radius: 10%;
+  border-radius: 10px;
 }
 
 .lg-inner-div img {
