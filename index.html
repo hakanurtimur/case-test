@@ -61,7 +61,7 @@
       <nav class="navbar navbar-expand-lg bg-white px-4 border-top">
         <div class="container-fluid">
           <button
-            class="navbar-toggler"
+            class="navbar-toggler my-2"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNavDropdown"
@@ -121,35 +121,235 @@
       </nav>
     </header>
     <!-- Header End -->
-    <main>
-      <section>
-        <div id="carouselExampleIndicators" class="carousel slide">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="./assets/images/slider-images/slider-1.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+    <main class="page-content">
+      <!-- Slider Section Start -->
+      <section class="slider" id="slider">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide slider-container"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
           </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active slider-1 text-white">
+              <div class="phones"></div>
+              <div class="slider-content h-100">
+                <div class="slider-main-content">
+                  <h1 class="slider-title">GET THE NEW IPHONE 12 PRO</h1>
+                  <p class="slider-text">
+                    A transformative triple-camera system that adds tons of
+                    capability without complexity
+                  </p>
+                  <div class="slider-btns w-100">
+                    <button
+                      class="btn btn-accent-color text-white border-0 p-2 px-4"
+                    >
+                      Buy Now<i class="bi bi-bag-plus-fill ps-3"></i>
+                    </button>
+                    <button
+                      class="btn btn-whitish-bg-color text-white p-2 px-4 border-0 bg-opacity-10"
+                    >
+                      With $599 with trade-in
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item slider-2">
+              <div class="phones"></div>
+              <div class="slider-content h-100">
+                <div class="slider-main-content">
+                  <h1 class="slider-title">GET THE NEW IPHONE 12 PRO</h1>
+                  <p class="slider-text">
+                    A transformative triple-camera system that adds tons of
+                    capability without complexity
+                  </p>
+                  <div class="slider-btns w-100">
+                    <button
+                      class="btn btn-accent-color text-white border-0 p-2 px-4"
+                    >
+                      Buy Now<i class="bi bi-bag-plus-fill ps-3"></i>
+                    </button>
+                    <button
+                      class="btn btn-whitish-bg-color text-white p-2 px-4 border-0 bg-opacity-10"
+                    >
+                      With $599 with trade-in
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item slider-3">
+              <div class="phones"></div>
+              <div class="slider-content h-100">
+                <div class="slider-main-content">
+                  <h1 class="slider-title">GET THE NEW IPHONE 12 PRO</h1>
+                  <p class="slider-text">
+                    A transformative triple-camera system that adds tons of
+                    capability without complexity
+                  </p>
+                  <div class="slider-btns w-100">
+                    <button
+                      class="btn btn-accent-color text-white border-0 p-2 px-4"
+                    >
+                      Buy Now<i class="bi bi-bag-plus-fill ps-3"></i>
+                    </button>
+                    <button
+                      class="btn btn-whitish-bg-color text-white p-2 px-4 border-0 bg-opacity-10"
+                    >
+                      With $599 with trade-in
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
       </section>
+      <!-- Slider Section End -->
+      <!-- Products Section Start-->
+      <section class="products" id="products">
+        <div
+          class="container-fluid py-5  text-center w-100 h-auto justify-content-center products-container"
+        >
+          <p class="position-relative z-2 text-muted">STRAIGHT FROM NIKE</p>
+          <h2 class="position-relative z-2">NEW COLLECTION</h2>
+
+          <div
+            class="col-12 gap-5 row justify-content-center mt-5 mb-0 mx-0 h-80 position-relative z-2"
+          >
+            <div class="col-5 row gap-5 justify-content-center">
+              <div class="row-6 row justify-content-between">
+                <div class="col-6 small-img-container text-center">
+                  <div
+                    class="sm-inner-div d-flex flex-column justify-content-between align-items-center"
+                  >
+                    <img src="./assets/images/sneakers-imgs/af-1.png" />
+                    <p
+                      class="d-flex flex-row justify-content-between px-3 align-items-center fw-bold w-100"
+                    >
+                      Nike Air Force 1<span
+                        class="py-1 px-3 bg-white text-accent-color rounded-5 fw-normal"
+                        >$99</span
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="col-6 small-img-container text-center">
+                  <div
+                    class="sm-inner-div d-flex flex-column justify-content-between align-items-center"
+                  >
+                    <img src="./assets/images/sneakers-imgs/court-air.png" />
+                    <p
+                      class="d-flex flex-row justify-content-between px-3 align-items-center fw-bold w-100"
+                    >
+                      NikeCourt Air<span
+                        class="py-1 px-3 bg-white text-accent-color rounded-5 fw-normal"
+                        >$99</span
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="row-6 row justify-content-between">
+                <div class="col-6 small-img-container text-center">
+                  <div
+                    class="sm-inner-div d-flex flex-column justify-content-between align-items-center"
+                  >
+                    <img src="./assets/images/sneakers-imgs/sb-zoom.png" />
+                    <p
+                      class="d-flex flex-row justify-content-between px-3 align-items-center fw-bold w-100"
+                    >
+                      Nike SB Zoom<span
+                        class="py-1 px-3 bg-white text-accent-color rounded-5 fw-normal"
+                        >$99</span
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="col-6 small-img-container text-center">
+                  <div
+                    class="sm-inner-div d-flex flex-column justify-content-between align-items-center"
+                  >
+                    <img src="./assets/images/sneakers-imgs/signal.png" />
+                    <p
+                      class="d-flex flex-row justify-content-between px-3 align-items-center fw-bold w-100"
+                    >
+                      Nike Signal<span
+                        class="py-1 px-3 bg-white text-accent-color rounded-5 fw-normal"
+                        >$99</span
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-5">
+              <div
+                class="lg-inner-div rounded-5 d-flex flex-column justify-content-between align-items-center p-3"
+              >
+                <div class="d-flex flex-row justify-content-between w-100">
+                  <span
+                    class="py-1 px-3 bg-black text-white rounded-5 fw-normal align-self-end"
+                    >SALE -50%</span
+                  >
+                  <span
+                    class="py-1 px-3 bg-white text-accent-color rounded-5 fw-normal align-self-end"
+                    >$99</span
+                  >
+                </div>
+                <img src="./assets/images/sneakers-imgs/af-shadow.png" />
+                <p class="h3 fw-bold w-100 text-start">
+                  Nike Airforce 1 Shadow
+                </p>
+                <p class="text-start w-100 text-black-50">Brand: Nike</p>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-outline-dark p-2 px-4 mt-5">
+            Explore Other Products
+          </button>
+        </div>
+      </section>
+      <!-- Products Section End-->
     </main>
 
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
