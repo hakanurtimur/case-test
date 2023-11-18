@@ -1,6 +1,40 @@
 const smallImageContainers = document.querySelectorAll(".sm-inner-div");
 const bigImageContainer = document.querySelector(".big-img-container");
-console.log(bigImageContainer);
+const mainSearch = document.getElementById("main-search");
+const searchModal = document.getElementById("search-modal");
+
+let pData = [];
+
+const searchHandler = (e) => {
+  if (pData.length === 0) {
+    return;
+  }
+  searchModal.innerHTML = "";
+  const pDataArray = Object.values(pData);
+  const searchValue = e.target.value.trim().toLowerCase();
+  if (searchValue.length === 0) {
+    searchModal.classList.add("d-none");
+    return;
+  }
+  const filteredArray = pDataArray.filter((item) => {
+    return (
+      item.name.toLowerCase().includes(searchValue) ||
+      item.brand.toLowerCase().includes(searchValue)
+    );
+  });
+  if (filteredArray.length === 0) {
+    searchModal.classList.add("d-none");
+    return;
+  }
+  searchModal.classList.remove("d-none");
+  filteredArray.forEach((item) => {
+    searchModal.innerHTML += `
+        <li class="d-flex flex-row justify-content-between w-100 text-black">
+          <span class="py-1 px-3 text-black fw-normal align-self-end"> ${item.name}</span>
+          <span class="py-1 px-3 text-black fw-normal align-self-end">Brand: ${item.brand}</span>
+        </li>`;
+  });
+};
 
 smallImageContainers.forEach((smallImageContainer) => {
   return (smallImageContainer.innerHTML = `
@@ -27,6 +61,16 @@ bigImageContainer.innerHTML = `
       </div>
 `;
 
+// Event Listeners
+
+// Search Event
+
+mainSearch.addEventListener("input", searchHandler);
+mainSearch.addEventListener("blur", function () {
+  searchModal.classList.add("d-none");
+});
+
+// Fetch Data for Products' information
 async function fetchData() {
   try {
     const response = await fetch(
@@ -38,41 +82,48 @@ async function fetchData() {
     }
 
     const data = await response.json();
-    console.log(data);
+
+    pData = data;
 
     smallImageContainers.forEach((smallImageContainer, index) => {
       return (smallImageContainer.innerHTML = `
   
-      <img src=${data[`p${index + 1}`].img} class="small-img" />
+      <img id = "${pData[`p${index + 1}`].id}" src="${
+        pData[`p${index + 1}`].img
+      }" class="small-img" />
       <div class= "d-flex flex-md-row flex-column justify-content-between px-3 w-100 align-items-center">
       <p
         class="fw-bold w-100"
       >
-      ${data[`p${index + 1}`].name}
+      ${pData[`p${index + 1}`].name}
       </p>
       <p
           class="py-1 px-3 bg-white text-accent-color rounded-5 fw-normal"
-          >$${data[`p${index + 1}`].price}
+          >$${pData[`p${index + 1}`].price}
           </p>
       </div>
  `);
     });
     bigImageContainer.innerHTML = `
-      <div class="d-flex flex-row justify-content-between w-100">
+      <div id="${
+        pData["p5"].id
+      }" class="d-flex flex-row justify-content-between w-100">
                   <span
                     class="py-1 px-3 bg-black text-white rounded-5 fw-normal align-self-end"
-                    >SALE %${data["p5"].sale * 100}</span
+                    >SALE %${pData["p5"].sale * 100}</span
                   >
                   <span
                     class="py-1 px-3 bg-white text-accent-color rounded-5 fw-normal align-self-end"
-                    >$${data[`p5`].price * data[`p5`].sale}</span
+                    >$${pData[`p5`].price * pData[`p5`].sale}</span
                   >
                 </div>
                 <img src="./assets/images/sneakers-imgs/af-shadow.png" />
                 <p class="h3 fw-bold w-100 text-start">
-                ${data[`p5`].name}
+                ${pData[`p5`].name}
                 </p>
-                <p class="text-start w-100 text-black-50">Brand: ${data[`p5`].brand}</p> `;
+                <p class="text-start w-100 text-black-50">Brand: ${
+                  pData[`p5`].brand
+                }</p> `;
   } catch (error) {
     console.error("Hata:", error);
     error = true;
@@ -80,5 +131,3 @@ async function fetchData() {
 }
 
 fetchData();
-
-console.log(smallImageContainers);

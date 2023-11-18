@@ -23,12 +23,15 @@
       >
         <div class="logo-container"></div>
         <form class="d-lg-flex d-none" role="search">
-          <div class="input-box">
+          <div class="input-box position-relative">
             <input
+              id="main-search"
               type="text"
               placeholder="Search For Products, Brands & Categories"
             />
             <i class="bi bi-search"></i>
+            <ul id="search-modal" class="p-0 w-100 h-auto d-none bg-white position-absolute top-100 start-0 z-3 rounded-3 border mt-1  border-sub-border-color border-2">
+            </ul>
           </div>
         </form>
         <div class="d-flex flex-row align-items-center justify-content-between gap-5">
@@ -87,8 +90,8 @@
                   <span class="pe-3">All Categories</span>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Iphone</a></li>
-                  <li><a class="dropdown-item" href="#">Sneakers</a></li>
+                  <li><a class="dropdown-item" href="#slider">Iphone</a></li>
+                  <li><a class="dropdown-item" href="#products">Sneakers</a></li>
                 </ul>
               </li>
               <li class="nav-item">
