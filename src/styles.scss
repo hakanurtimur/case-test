@@ -1,5 +1,4 @@
 // variables
-
 $accent-color: #FF4F05;
 $sub-border-color: #d8d9da;
 $carousel-control-color: white;
@@ -17,10 +16,7 @@ $custom-theme-colors: (
 $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
-
-
 // Header stlyes start
-
 .logo-container {
   width: 90px;
   height: 18px;
@@ -51,45 +47,17 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
   color: #adb5bd;
 }
 
-.btns{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 3rem;
-    height: fit-content;
-}
-.btns div{
-    display: flex;
-    align-items: center;
-}
-.btns div i{
-    cursor: pointer;
-    font-size: 1.5rem;
-    padding: 0;
-}
-.btns div .i-heart{
-    cursor: pointer;
-    font-size: 1.2rem;
-    padding: 0;
-}
-.btn-group div span{
-    font-size: 0.5rem;
-}
-
-nav{
-    border-top: 1px solid $sub-border-color;
-}
 .nav-link:hover{
-    color: $accent-color !important;
+    color: $accent-color;
 }
 .nav-link.active{
     color: $accent-color !important;
     border-bottom: 2px solid $accent-color;
 }
-
+.nav-link.dropdown-toggle:hover{
+    color: $dark;
+}
 // Header stlyes end
-
 // Slider styles start
 .page-content{
   margin: 153px 0 0 0;
@@ -98,18 +66,10 @@ nav{
   height: calc(100vh - 153px);
 }
 
-.carousel-inner{
-  height: 100%;
-  width: 100%;
-}
 .carousel-item{
-  height: 100%;
-  width: 100%;
-  background-position: 0 0;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 0 15%;
-  position: relative;
 }
 .carousel-item::before {
   content: ''; 
@@ -121,15 +81,6 @@ nav{
   background: radial-gradient(ellipse, rgba(154, 96, 221, 0.2) 20%, transparent 60%,  rgba(154, 96, 221, 0.05) 90%, transparent 100%);
   background-position: 0 0;
   z-index: 1;
-}
-.slider-content{
-  position: relative;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  background: transparent;
 }
 .phones{
   position: absolute;
@@ -144,32 +95,17 @@ nav{
   background-repeat: no-repeat;
   z-index: 1;
 }
-.slider-content .slider-main-content{
+
+
+.slider-main-content{
   width: 50%;
-  gap: 1rem;
-  z-index: 2;
 }
-.slider-content .slider-main-content h1{
-  font-size: 3rem;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 1rem;
+@media only screen and (max-width: 768px){
+.slider-main-content{
+    width: 100%;
+  }
 }
-.slider-content .slider-main-content p{
-  font-size: 1rem;
-  font-weight: 400;
-  color: #fff;
-  margin-bottom: 2rem;
-}
-.slider-btns{
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  justify-content: flex-start;
-  align-items: center;
-}
+
 .slider-1{
   background-image: url("./assets/images/slider-images/slider-1.png");
 }
@@ -183,29 +119,27 @@ nav{
 // products styles start
 
 .products{
-  height: 700px;
+  height: 100vh;
   background: linear-gradient(180deg, #f8f8f8 40%, white 0%);
 }
-.products-container > h2, .products-container > p{
-  letter-spacing: 0px;
+@media screen and (max-width: 992px){
+  .products{
+    height: auto;
+  }
 }
-
-
 .sm-inner-div{
-  width: 90%;
+  width: 100%;
   height: 90%;
   background-color: $products-card-bg-color;
   border-radius: 10px;
 }
-
 .small-img{
   width: 60%;
   height: 60%;
   object-fit: cover;
 }
-
 .lg-inner-div{
-  width: 90%;
+  width: 98%;
   height: 95%;
   background-color: $products-card-bg-color;
   border-radius: 10px;
@@ -213,9 +147,5 @@ nav{
 .lg-inner-div img{
   width: 70%;
   height: 70%;
-}
-
-.products-container > button:hover{
-  color: white;
 }
 // products styles end

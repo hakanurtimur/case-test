@@ -44,14 +44,17 @@ async function fetchData() {
       return (smallImageContainer.innerHTML = `
   
       <img src=${data[`p${index + 1}`].img} class="small-img" />
+      <div class= "d-flex flex-md-row flex-column justify-content-between px-3 w-100 align-items-center">
       <p
-        class="d-flex flex-row justify-content-between px-3 align-items-center fw-bold w-100"
+        class="fw-bold w-100"
       >
-      ${data[`p${index + 1}`].name}<span
-          class="py-1 px-3 bg-white text-accent-color rounded-5 fw-normal"
-          >$${data[`p${index + 1}`].price}</span
-        >
+      ${data[`p${index + 1}`].name}
       </p>
+      <p
+          class="py-1 px-3 bg-white text-accent-color rounded-5 fw-normal"
+          >$${data[`p${index + 1}`].price}
+          </p>
+      </div>
  `);
     });
     bigImageContainer.innerHTML = `
