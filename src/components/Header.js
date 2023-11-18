@@ -16,7 +16,7 @@ const Header = () => {
         </ul>
       </div>
     </form>
-    <div class="d-flex flex-row align-items-center justify-content-between gap-5">
+    <div class="d-none d-md-flex flex-row align-items-center justify-content-between gap-5">
       <div class="p-0 position-relative btn">
         <i class="bi bi-heart i-heart h5"></i>
         <span
