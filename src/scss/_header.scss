@@ -1,0 +1,40 @@
+.logo-container {
+    width: 90px;
+    height: 18px;
+    overflow: hidden;
+    background-image: url("../../public/assets/images/logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .input-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid $sub-border-color;
+    padding: 5px 16px;
+    border-radius: 10px;
+  }
+  .input-box input {
+    width: 550px;
+    height: 40px;
+    place-content: center;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+  }
+  .input-box input::placeholder {
+    color: #adb5bd;
+  }
+  
+  .nav-link:hover{
+      color: $accent-color;
+  }
+  .nav-link.active{
+      color: $accent-color !important;
+      border-bottom: 2px solid $accent-color;
+  }
+  .nav-link.dropdown-toggle:hover{
+      color: $dark;
+  }

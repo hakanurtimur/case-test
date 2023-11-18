@@ -42,8 +42,8 @@ const Header = () => {
         </span>
       </div>
     </div>
-  </div>`
-    return template
+  </div>`;
+    return template;
 }
 
 export default Header
