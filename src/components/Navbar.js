@@ -1,5 +1,5 @@
 const Navbar = () => {
-    const template = `
+  const template = `
     <nav class="navbar navbar-expand-lg bg-white px-4 border-top border-2 border-sub-border-color">
     <div class="container-fluid">
       <button
@@ -19,7 +19,7 @@ const Navbar = () => {
         >
           <li class="nav-item dropdown">
             <a
-              class="nav-link dropdown-toggle bg-body-tertiary lg-d-flex lg-justify-content-between lg-align-items-center lg-gap-2 lg-rounded-1 lg-border lg-border-dark-subtle"
+              class="nav-link dropdown-toggle lg-p-0 p-1 bg-body-tertiary lg-d-flex lg-justify-content-between lg-align-items-center lg-gap-2 lg-rounded-1 lg-border lg-border-dark-subtle"
               href="#"
               role="button"
               data-bs-toggle="dropdown"
@@ -58,7 +58,7 @@ const Navbar = () => {
       </div>
     </div>
   </nav>`;
-    return template;
-}
+  return template;
+};
 
 export default Navbar;

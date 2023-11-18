@@ -1,5 +1,5 @@
 const Slider = () => {
-    const template = `
+  const template = `
     <section class="slider" id="slider">
     <div
     id="carouselExampleIndicators"
@@ -122,7 +122,7 @@ const Slider = () => {
   </div>
   <section>
   `;
-    return template;
+  return template;
 };
 
 export default Slider;

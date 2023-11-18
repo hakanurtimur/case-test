@@ -1,16 +1,16 @@
-import "./scss/main.scss";
-import Header from "./components/Header";
-import Navbar from "./components/Navbar";
-import Slider from "./components/Slider";
-import Products from "./components/Products";
-import { fetchProducts } from "./product-fetch";
-import { searchEvent } from "./event-listeners";
-import { largeProduct, smallProduct } from "./components/FetchedProducts";
+import './scss/main.scss';
+import Header from './components/Header';
+import Navbar from './components/Navbar';
+import Slider from './components/Slider';
+import Products from './components/Products';
+import { fetchProducts } from './product-fetch';
+import { searchEvent } from './event-listeners';
+import { largeProduct, smallProduct } from './components/FetchedProducts';
 
 let pData = [];
 
 const app = async () => {
-  document.getElementById("container").innerHTML = `
+  document.getElementById('container').innerHTML = `
     <header id="header" class="fixed-top bg-white">
         ${Header()}
         ${Navbar()}
@@ -21,13 +21,12 @@ const app = async () => {
     </main>
   `;
 
-  const smallImageContainers = document.querySelectorAll(".sm-inner-div");
-  const bigImageContainer = document.querySelector(".big-img-container");
+  const smallImageContainers = document.querySelectorAll('.sm-inner-div');
+  const bigImageContainer = document.querySelector('.big-img-container');
 
   pData = await fetchProducts(pData);
-  smallImageContainers.forEach((smallImageContainer, index) => {
-    return (smallImageContainer.innerHTML = `${smallProduct(pData, index)}`);
-  });
+  // eslint-disable-next-line no-return-assign, no-param-reassign
+  smallImageContainers.forEach((smallImageContainer, index) => (smallImageContainer.innerHTML = `${smallProduct(pData, index)}`));
 
   bigImageContainer.innerHTML = `${largeProduct(pData)}`;
   searchEvent(pData);
