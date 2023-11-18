@@ -10,13 +10,19 @@ import { largeProduct, smallProduct } from "./components/FetchedProducts";
 let pData = [];
 
 const app = async () => {
-  document.getElementById("header").innerHTML = `${Header() + Navbar()}`;
-  document.getElementById("slider").innerHTML = `${Slider()}`;
-  document.getElementById("products-container").innerHTML = Products();
+  document.getElementById("container").innerHTML = `
+    <header id="header" class="fixed-top bg-white">
+        ${Header()}
+        ${Navbar()}
+    </header>
+    <main class ="page-content">
+        ${Slider()}
+        ${Products()}
+    </main>
+  `;
+
   const smallImageContainers = document.querySelectorAll(".sm-inner-div");
   const bigImageContainer = document.querySelector(".big-img-container");
-  const mainSearch = document.getElementById("main-search");
-  const searchModal = document.getElementById("search-modal");
 
   pData = await fetchProducts(pData);
   smallImageContainers.forEach((smallImageContainer, index) => {

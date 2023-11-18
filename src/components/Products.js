@@ -63,8 +63,31 @@ const Products = () => {
         </div>
       </div>
     </div>
-  </div>`;
-  const template = smallProductsTemplate + largeProductsTemplate;
+  </div>
+  
+  `;
+  const template = `
+  <section class="products mb-5 pb-5" id="products">
+    <div
+      class="container-fluid pt-5 text-center w-100 justify-content-center products-container"
+      >
+        <p class="text-muted">STRAIGHT FROM NIKE</p>
+        <h2>NEW COLLECTION</h2>
+    </div>
+
+    <div
+      id="products-container"
+      class="row justify-content-center mt-5 mb-0 mx-0 position-relative z-2 h-75 w-100"
+      >
+        ${smallProductsTemplate + largeProductsTemplate} 
+    </div>
+    <div class="container-fluid text-center mb-5">
+          <button class="btn btn-outline-dark p-2 px-4">
+            Explore Other Products
+          </button>
+    </div>
+  </section>
+  `;
   return template;
 };
 export default Products;

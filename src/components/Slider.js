@@ -1,5 +1,6 @@
 const Slider = () => {
     const template = `
+    <section class="slider" id="slider">
     <div
     id="carouselExampleIndicators"
     class="carousel slide slider-container"
@@ -118,7 +119,9 @@ const Slider = () => {
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
-  </div>`;
+  </div>
+  <section>
+  `;
     return template;
 };
 
