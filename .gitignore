@@ -5,26 +5,34 @@ node_modules/
 *.log
 npm-debug.log*
 
-# Yerel .env dosyaları
+# local env.
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
-# Veritabanı dosyaları
+# DB files
 *.sqlite
 *.db
 
-# Yerel dosyalar
+# Local Files
 .DS_Store
-Thumbs.db
-
-# VS Code
+node_modules
+dist/
+cache/
+development/
+# Visual Studio Code
 .vscode/
 
-# IDE veya metin editörü özel dosyalar
+# Visual Studio
 .idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
+
+
+.cache/
+development
+dist
+
