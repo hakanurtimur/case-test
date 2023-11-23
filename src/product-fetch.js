@@ -1,9 +1,9 @@
 export async function fetchProducts() {
-  const smallImageContainers = document.querySelectorAll(".sm-inner-div");
-  const bigImageContainer = document.querySelector(".big-img-container");
+  const smallImageContainers = document.querySelectorAll('.sm-inner-div');
+  const bigImageContainer = document.querySelector('.big-img-container');
   try {
     const response = await fetch(
-      " https://case-test-8cd5d-default-rtdb.firebaseio.com/products.json"
+      ' https://case-test-8cd5d-default-rtdb.firebaseio.com/products.json',
     );
 
     if (!response.ok) {
@@ -14,7 +14,7 @@ export async function fetchProducts() {
 
     return data;
   } catch (error) {
-    console.error("Hata:", error);
+    console.error('Hata:', error);
     error = true;
   }
 }

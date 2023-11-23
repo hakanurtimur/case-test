@@ -18,7 +18,7 @@ npm-debug.log*
 # Local Files
 .DS_Store
 node_modules
-dist/
+
 cache/
 development/
 # Visual Studio Code
@@ -34,5 +34,5 @@ development/
 
 .cache/
 development
-dist
+
 
